@@ -70,47 +70,61 @@ alarm_info:
   girlfriend_infos:
     #女友微信昵称或者备注名，不能输入微信号。（如填：文件传输助手，发消息到文件传输助手，测试效果）
     - wechat_name:
-        - '文件传输助手'
-        - '诗风'
+        - '.小盼m 🍊'
       # 注意：必须要把需要的群聊保存到通讯录
       group_name: # 群聊的名称
-        - '萌萌哒'
-        - '蕉群'
+        - '傻逼互diss羊毛群00'
       alarm_timed: # 定时发送的时间
-        - "13:25"
-        - "00:33"
+        - "08:00"
       alarm_jitter: 300 # 给定时时间加一个随机抖动 300 秒。定时时间【-5，+5】分钟范围内发送。（不然每天固定在同个时间段有点尴尬）（可空）
       is_tomorrow: True # 是否发送明日信息（如天气，星座，万年历）
       #女友所在城市，用于发送天气。（可空）
-      city_name: '桂林'
+      city_name: '广州'
       # 此城市的 pm2.5 值。
-      air_quality_city: '桂林'
+      air_quality_city: '广州'
       # 格言渠道（1 : ONE●一个，2 : 词霸（每日英语，双语）3: 土味情话 4 : 一言，5：笑话，6 民国情书,7彩虹屁)(可空)
-      dictum_channel: 1
+      dictum_channel: 6
       # 从哪天开始勾搭的（可空），配合 start_date_msg 使用。
-      start_date: '2017-10-10'
+      start_date: ''
       # 自定义方案（可空）， {}表示用于占位，代表天数，与 start_date 一起使用。单填无意义
       #  默认为：『宝贝这是我们在一起的第{}天』,参考：爱你的第{}天
-      start_date_msg: '宝贝这是我们在一起的第{}天'
+      start_date_msg: ''
       # 万历年（可空），（中老年最爱）
       calendar: True
       # 星座运势（可空）填生日日期："1980-06-15" or "06-15" or "白羊座"
-      horescope: "处女座"
+      horescope: "12-29"
       # 落款（可空），落款参考：['厌物', '你脚下的蚂蚁', '专说骗人的诳话者', '黄天霸', 'cxk', '魔鬼的叔父', '哺乳类脊椎动物之一', '名字写在水上的人', 'BIG BAD WOLF', '你的兄弟']
-      sweet_words: '你脚下的蚂蚁'
+      sweet_words: '--from 老公么么哒😘'
 
 
     #  如果你需要另一套方案，如下面复制即可
     #  如不需要，则删除或注解下面所有的数据
-    - group_name: 'EverydayWechat 交流1群'
-      wechat_name: '贴心小秘书'
-      city_name: '漳州'
-      start_date: '2011-11-11'
-      start_date_msg: '分手后的第{}天'
+    - group_name: '傻逼互diss羊毛群'
+      city_name: '上海'
+      dictum_channel: 7
+      alarm_timed: "08:00"
+      is_tomorrow: False
+
+    - group_name: '傻逼互diss羊毛群'
+      city_name: '武汉'
       dictum_channel: 4
-      sweet_words: '名字写在水上的人'
-      alarm_timed: "23:02"
-      is_tomorrow: True
+      alarm_timed: "08:00"
+      is_tomorrow: False
+
+    - group_name: '傻逼互diss羊毛群'
+      city_name: '深圳'
+      dictum_channel: 6
+      alarm_timed: "08:00"
+      is_tomorrow: False
+
+    - group_name: '傻逼互diss羊毛群'
+      alarm_timed: "10:00"
+      sweet_words: 'KindleX 打卡提醒 @fxm樊小明 @iori'
+
+    - group_name: '傻逼互diss羊毛群'
+      alarm_timed: "19:00"
+      sweet_words: 'KindleX 打卡提醒 @fxm樊小明 @iori'
+
 #---------------------------------------定时提醒功能设置--------------------------------------end
 
 
@@ -122,11 +136,7 @@ group_helper_conf:
 
   # 白名单用户。当 is_all：Fase。只处理这个群里的消息
   group_name_white_list:
-    - '蕉群'
-    - '群机器人测试群'
-    - '小号测试群'
-    - 'EverydayWechat 交流1群'
-    - 'EverydayWechat 交流2群'
+    - '傻逼互diss羊毛群'
 
   # 黑名单用户。当 is_all ：True 。这个群里的用户不受影响。
   group_name_black_list:
@@ -142,8 +152,8 @@ group_helper_conf:
   is_air_quality: True # 是否开启快递查询。
   is_express: True # 是否开启快递查询
   express_info: # 快递鸟（http://www.kdniao.com/）
-    app_id: '你申请的api_id'
-    app_key: '你申请的app_key'
+    app_id: '1266083'
+    app_key: 'bdbf28fc-5d25-4b69-9068-a54f3a1a4c13'
 
 
 #--------------------------- 群聊助手设置 --------------------------end
@@ -152,7 +162,7 @@ group_helper_conf:
 # start ----------------------------------- 数据库设置 ----------------------------------- start
 # 可不安装与设置数据库内容，数据库主要用于群助手功能中，查询数据的缓存。
 db_config: # 请安装 mongodb 数据库
-  is_open_db: True # 是否开启数据库功能
+  is_open_db: False # 是否开启数据库功能
   mongodb_conf:
     'host': 'localhost'
     'port': 27017

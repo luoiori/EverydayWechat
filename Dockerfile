@@ -12,7 +12,7 @@ COPY . /app
 ENV MODE server
 
 # 构建者的基本信息
-MAINTAINER DoubleThunder <sfyc23@gmail.com>
+MAINTAINER iori <iori.law.cn@gmail.com>
 
 
 ENTRYPOINT ["python", "run.py"]
